@@ -9,16 +9,14 @@ sns.set(style="white")
 def kendall_pval(x, y):
     return kendalltau(x, y)[1]
 
-
 def pearsonr_pval(x, y):
     return pearsonr(x, y)[1]
-
 
 def spearmanr_pval(x, y):
     return spearmanr(x, y)[1]
 
 
-def correlation_matrix(df):
+def correlation_matrix(df, function=pearsonr):
     """
     Given a pd.DataFrame, calculate Pearson's R
     and the p-values of the correlation.
@@ -41,8 +39,8 @@ def correlation_matrix(df):
     for r in df.columns:
         for c in df.columns:
             # pearsonr returns a tuple like (corr, pval)
-            correlations[r][c] = round(pearsonr(df[r], df[c])[0], 4)
-            p_values[r][c] = round(pearsonr(df[r], df[c])[1], 4)
+            correlations[r][c] = round(function(df[r], df[c])[0], 4)
+            p_values[r][c] = round(function(df[r], df[c])[1], 4)
 
     return (correlations.apply(pd.to_numeric), p_values.apply(pd.to_numeric))
 
@@ -86,10 +84,10 @@ def calc_lagmeans(s, lags):
 
 
 def correlation_matrix_plot(
-    df, significance_level=0.05, cbar_levels=8, figsize=(6, 6)
+    df, function=pearsonr, significance_level=0.05, cbar_levels=8, figsize=(6, 6)
 ):
     """Plot corrmat considering p-vals."""
-    corr, pvals = correlation_matrix(df)
+    corr, pvals = correlation_matrix(df, function=function)
 
     # create triangular mask for heatmap
     mask = np.zeros_like(corr)
@@ -114,6 +112,8 @@ def correlation_matrix_plot(
         annot=pvals_plot,
         cbar_kws=cbar_kws,
     )
-    plt.title("p < {:.2f}".format(significance_level))
+
+    title = str(function).split(" ")[1]
+    plt.title("{}, p < {:.4f}".format(title, significance_level))
     plt.tight_layout()
     return fig, ax
