@@ -1,0 +1,21 @@
+,Occupation,Skill,Coreness,Viable transitions
+0,"Mining, manufacturing and construction supervisors",quality standards,0.71,6
+1,"Mining, manufacturing and construction supervisors",wear appropriate protective gear,0.48,4
+2,"Mining, manufacturing and construction supervisors",apply health and safety standards,0.47,4
+3,"Mining, manufacturing and construction supervisors",manage staff,0.93,4
+4,"Mining, manufacturing and construction supervisors",troubleshoot,0.55,4
+5,Mining and mineral processing plant operators,wear appropriate protective gear,0.48,3
+6,Mining and mineral processing plant operators,quality standards,0.71,3
+7,Mining and mineral processing plant operators,inspect quality of products,0.39,2
+8,Mining and mineral processing plant operators,work in a construction team,0.11,2
+9,Mining and mineral processing plant operators,inspect construction supplies,0.16,2
+10,"Manufacturing, mining, construction, and distribution managers",company policies,0.35,5
+11,"Manufacturing, mining, construction, and distribution managers",manage staff,0.93,4
+12,"Manufacturing, mining, construction, and distribution managers",manage budgets,0.90,4
+13,"Manufacturing, mining, construction, and distribution managers",liaise with managers,0.64,4
+14,"Manufacturing, mining, construction, and distribution managers",recruit employees,0.53,4
+15,Mining and construction labourers,follow safety procedures when working at heights,0.16,3
+16,Mining and construction labourers,wear appropriate protective gear,0.48,3
+17,Mining and construction labourers,troubleshoot,0.55,3
+18,Mining and construction labourers,use personal protection equipment,0.34,2
+19,Mining and construction labourers,quality standards,0.71,2

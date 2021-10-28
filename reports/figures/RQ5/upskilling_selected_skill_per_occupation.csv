@@ -1,0 +1,5 @@
+,Occupation,Skill,Viable transitions,Coreness,id_skill,id_occ
+0,"Manufacturing, mining, construction, and distribution managers",company policies,5,0.35,13004,132
+1,Mining and construction labourers,troubleshoot,3,0.55,2756,931
+2,Mining and mineral processing plant operators,quality standards,3,0.71,7508,811
+3,"Mining, manufacturing and construction supervisors",quality standards,6,0.71,7508,312
