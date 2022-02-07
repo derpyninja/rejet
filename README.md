@@ -1,7 +1,7 @@
-rejet
+Reskilling for the European green transition.
 ==============================
 
-RMSc thesis on reskilling for a just energy transition.
+MSc thesis project
 
 Project Organization
 ------------
